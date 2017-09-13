@@ -1,6 +1,6 @@
 var restify = require('restify'),
   products = require('./products'),
-  port = process.env.PORT || 3000;
+  port = process.env.PORT || 5000;
 
 var server = restify.createServer({
   name: 'Resit API'
