@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Resit API",
   "main": "server.js",
   "scripts": {
@@ -15,6 +15,16 @@
   "dependencies": {
     "http-errors": "^1.6.2",
     "restify": "^5.2.0",
+    "request": "^2.65.0",
     "restify-errors": "^5.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fung8928/ResitAssignment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fung8928/ResitAssignment/issues"
+  },
+  "homepage": "https://github.com/fung8928/ResitAssignment#readme"
 }

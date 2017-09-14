@@ -1,4 +1,5 @@
 var restify = require('restify'),
+   request = require('request'),
   products = require('./products'),
   port = process.env.PORT || 5000;
 
@@ -10,6 +11,10 @@ server.use(function(req, res, next) {
   console.log(req.method + '' + req.url);
   return next();
 });
+
+server.get('/', function(req, res, next) {
+	res.redirect('api/products', next)
+})
 
 server.use(restify.plugins.bodyParser());
 
