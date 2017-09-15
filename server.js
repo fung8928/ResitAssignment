@@ -1,10 +1,10 @@
 var restify = require('restify'),
    request = require('request'),
-  products = require('./products'),
+  products = require('./api_products/products'),
   port = process.env.PORT || 5000;
 
 var server = restify.createServer({
-  name: 'Resit API'
+  name: 'Resit Assignment'
 });
 
 server.use(function(req, res, next) {
@@ -12,7 +12,17 @@ server.use(function(req, res, next) {
   return next();
 });
 
-server.get('/', function(req, res, next) {
+//Client part
+
+server.get('/', restify.plugins.serveStatic({
+  directory: './client/',
+  file: 'index.html'
+}));
+
+
+//API part
+
+server.get('api/', function(req, res, next) {
 	res.redirect('api/products', next)
 })
 
