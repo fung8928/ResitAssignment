@@ -24,6 +24,8 @@ server.post('api/products', products.post);
 server.put('api/products/:id', products.put);
 server.del('api/products/:id', products.del);
 
+server.get('api/ISBN/:id', products.ISBN);
+
 server.listen(port, function() {
   console.log('API Running at ' + port);
 });
