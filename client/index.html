@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html ng-app>
 
 <head>
@@ -8,9 +9,57 @@
   <h1>
     Health Care Company Recipe
   </h1>
-  <input ng-model="name" placeholder="Type world..."> Hello {{name}}
-
-  <script src="./client.js"></script>
+    
+<div ng-app="myApp" ng-controller="recipes"> 
+  
+  <h3>
+    Check our recommend Recipe !
+  </h3>
+  <table border="1"><tbody><tr><td>
+  <p>
+    {{ msg }}    
+  </p>
+  
+  <button ng-click="Back"> Back </button>
+  <button ng-click="Refresh"> Refresh </button>
+  <button ng-click="Next"> Next </button>
+  </td></tr></tbody></table><br>
+    
+  
+  <table border="1"><tbody><tr><td>
+    <p>
+      Click the button to save your favorite recipes or leave a comment for it
+    </p>
+    <p><button ng-click="love"> I Love it ! </button></p>
+    
+    <p><input type="text" ng-model="addcomment" placeholder="Comment" /></p>
+    <button ng-click="addcomment"> Comment </button>
+    
+  </td></tr></tbody></table><br>
+  
+  <table border="1"><tbody><tr><td>
+    <p>For Admin</p>
+    
+    <td>
+  <p>Check by ID</p>
+    <input type="text" ng-model="checkID" />
+    <button ng-click="checkID"> Check </button>
+  </td>
+    
+   <td>
+  <p>Add new recipes</p>
+    <p><input type="text" ng-model="addid" placeholder="id" /></p>
+    <p><input type="text" ng-model="addtitle" placeholder="Title" /></p>
+    <p><input type="text" ng-model="addauthors" placeholder="Authors" /></p>
+    <p><input type="text" ng-model="adddescription" placeholder="Description" /></p>     
+    <p><input type="text" ng-model="addcomment" placeholder="Comment" /></p>
+    <p><button ng-click="addnew"> Add </button></p>
+  </td>
+     
+    </td></tr></tbody></table><br>
+  
+  </div>
+  <script src="client.js"></script>
 </body>
 
 </html>
